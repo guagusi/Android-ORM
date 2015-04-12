@@ -1,13 +1,13 @@
 # Android-ORM
 ===============
 通过注解反射实现，性能一般。
-插入1000条数据耗时14200ms
+插入1000条数据耗时14200ms/<br>
 查询12000条数据耗时4700ms
 
 使用介绍
 ---------
   在项目资源目录res/values 下新建orm.xml，定义数据库的名字，版本号，数据表实体的全限定名。/<br>
-    ```
+    ```Java
     <?xml version="1.0" encoding="utf-8"?>
     <resources>
      
@@ -24,7 +24,7 @@
     </resources>
     ```
   给实体添加注解
-  ```
+  ```Java
   @Table(name="teacher")
   public class Teacher {
 
@@ -40,15 +40,15 @@
     	@Column(type=ColumnType.BLOB)
     	public Bitmap avatar;
 	
-	@Column(type=ColumnType.TEXT)
-	public String birthday;
-	
-	@Column(type=ColumnType.REAL)
-	public double weigth;
+		@Column(type=ColumnType.TEXT)
+		public String birthday;
+		
+		@Column(type=ColumnType.REAL)
+		public double weigth;
   ```
   
   通过ORMLoader单例调用实现怎删改查
-  ```
+  ```Java
   ORMLoader mOrm = ORMLoader.getORMInstance(this);
   mOrm.insertEntityList(teachers);
   // where weigth = teacher.getWeigth()
