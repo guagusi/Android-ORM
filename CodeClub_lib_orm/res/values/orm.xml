@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+ 
+    <!-- 数据库名 -->
+    <string name="orm_db_name">orm_test</string>
+    <!-- 数据版本号 -->
+    <string name="orm_db_version">7</string>
+    <string-array name="tables">
+        <!-- 全限定名 -->
+        <item name="student">com.codeclub.lib.orm.test.entity.Student</item>
+        <item name="teacher">com.codeclub.lib.orm.test.entity.Teacher</item>
+    </string-array>
+</resources>
