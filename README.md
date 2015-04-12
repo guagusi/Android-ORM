@@ -7,7 +7,7 @@
 使用介绍
 ---------
   在项目资源目录res/values 下新建orm.xml，定义数据库的名字，版本号，数据表实体的全限定名。/<br>
-    ```Java
+    ```xml
     <?xml version="1.0" encoding="utf-8"?>
     <resources>
      
